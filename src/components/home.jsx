@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full bg-gradient-to-b from-purple-950 to-cyan-800 ">
+    <div className="h-screen w-full bg-gradient-to-b from-purple-950 to-cyan-300 ">
       <div className="flex items-center h-full">
         <div className="flex items-center justify-center flex-col md:flex-wrap w-full">
           <h1 className="sm:text-4xl font-bold text-shadow-sm text-amber-600 mb-4">
@@ -44,7 +44,7 @@ const Home = () => {
             </div>
           </div>
           <button
-            className="bg-blue-500 hover:bg-blue-700 hover:scale-110 text-white mt-4 ml-2 font-bold py-2 px-4 rounded shadow-md flex items-center"
+            className="bg-gradient-to-r from-blue-500 to-blue-400 hover:bg-blue-700 hover:scale-110 text-white mt-4 ml-2 font-bold py-2 px-4 rounded shadow-md flex items-center"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

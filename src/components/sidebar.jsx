@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
     <div className="hidden md:block fixed top-1/3 left-0 h-full z-50">
       <div
-        className={`h-1/4 bg-gradient-to-r from-white to-cyan-800 p-2 rounded-r-lg ${expanded ? 'w-35' : 'w-16'
+        className={`h-1/4 bg-gradient-to-r from-cyan-800 to-white p-2 rounded-r-lg ${expanded ? 'w-35' : 'w-16'
           }`}
         onMouseEnter={handleExpand}
         onMouseLeave={handleExpand}
@@ -37,7 +37,7 @@ const Sidebar = () => {
             <img
               src={link.logo}
               alt={link.name}
-              className="w-10 h-10 mx-auto ml-2" // Fixed logo size
+              className="w-10 h-10 mx-auto ml-2"
             />
             {expanded && <span>{link.name}</span>}
             <span className="sr-only">{link.name}</span>
