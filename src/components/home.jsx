@@ -21,10 +21,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full bg-gradient-to-b from-purple-950 to-cyan-300 ">
+    <div className="h-screen w-full bg-gradient-to-b from-purple-950 to-cyan-600 ">
       <div className="flex items-center h-full">
         <div className="flex items-center justify-center flex-col md:flex-wrap w-full">
-          <h1 className="sm:text-4xl font-bold text-shadow-sm text-amber-600 mb-4">
+          <h1 className="text-center text-4xl font-bold text-shadow-sm text-amber-600 mb-4">
             {headingWords.slice(0, wordIndex).join(" ")}
           </h1>
           <div className="flex flex-col items-center justify-center md:flex-row w-1/2">
@@ -34,7 +34,7 @@ const Home = () => {
               alt="my-profile"
             />
             <div className="text-white">
-              <p className="box-border w-96">
+              <p className="box-border w-96 text-justify  px-4  md:text-xl">
                 I'm Farhan Ali, a Software Engineer and Full Stack Developer with
                 a knack for crafting innovative solutions. With a Bachelor's in
                 Computer Science and a diverse skill set, I thrive on tackling

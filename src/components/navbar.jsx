@@ -45,7 +45,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li
               key={item.id}
-              className="px-4 text-yellow-500 capitalize cursor-pointer hover:scale-105 hover:duration-100 hover:text-yellow-200"
+              className="px-4 text-2xl text-yellow-500 capitalize cursor-pointer hover:scale-105 hover:duration-100 hover:text-yellow-200"
             >
               {item.name}
             </li>

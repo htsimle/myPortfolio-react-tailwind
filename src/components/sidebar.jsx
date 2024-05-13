@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InstagramLogo from "../images/Instagram-Logo.svg";
+import InstagramLogo from "../images/icons8-resume-64.png";
 import LinkedInLogo from "../images/LinkedIn-Icon-Logo.svg";
 import GitHubLogo from "../images/GitHub-Log.svg";
 import GmailLogo from "../images/Gmail-Logo.svg";
@@ -11,7 +11,7 @@ const Sidebar = () => {
     { name: 'Mail', url: 'mailto:farhanalibhatti785@gmail.com', logo: GmailLogo },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/farhan-ali-bhatti/', logo: LinkedInLogo },
     { name: 'GitHub', url: 'https://github.com/htsimle', logo: GitHubLogo },
-    { name: 'Instagram', url: 'https://www.instagram.com/ig_farhan785/', logo: InstagramLogo },
+    { name: 'Resume', url: "/Farhan Ali resumeDev.pdf", logo: InstagramLogo, download:true },
   ];
 
   const handleExpand = () => {
@@ -31,6 +31,7 @@ const Sidebar = () => {
             key={index}
             href={link.url}
             target="_blank"
+            download={link.download}
             rel="noopener noreferrer"
             className={`block mb-2 text-black transition-transform transform hover:scale-${expanded ? '110' : '105'} flex items-center justify-${expanded ? 'start' : 'center'} h-${expanded ? '8' : '16'}`}
           >
