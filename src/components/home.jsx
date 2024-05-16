@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full bg-gradient-to-b from-purple-950 to-cyan-600 ">
+    <div id="home" className="h-screen w-full bg-gradient-to-b from-purple-950 to-cyan-600 ">
       <div className="flex items-center h-full">
         <div className="flex items-center justify-center flex-col md:flex-wrap w-full">
           <h1 className="text-center text-4xl font-bold text-shadow-sm text-amber-600 mb-4">

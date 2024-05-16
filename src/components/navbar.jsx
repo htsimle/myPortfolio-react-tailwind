@@ -8,22 +8,27 @@ const Navbar = () => {
     {
       id: 1,
       name: "Home",
-      path: "/",
+      sectionId: "home", // Assign unique IDs to sections
     },
     {
       id: 2,
       name: "About",
-      path: "/about",
+      sectionId: "about",
     },
     {
       id: 3,
       name: "Projects",
-      path: "/projects",
+      sectionId: "projects",
     },
     {
       id: 4,
+      name: "Experience",
+      sectionId: "experience",
+    },
+    {
+      id: 5,
       name: "Contact",
-      path: "/contact",
+      sectionId: "contact",
     },
   ];
 
@@ -31,9 +36,16 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
+  const handleScroll = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+    }
+  };
+
   return (
     <>
-      <div className="flex justify-between items-center w-full h-20 bg-gradient-to-r from-purple-950 to-cyan-800  fixed shadow-lg">
+      <div className="flex justify-between items-center w-full h-20 bg-gradient-to-r from-purple-950 to-cyan-800 fixed shadow-lg">
         <div>
           <img
             src={logo}
@@ -46,6 +58,7 @@ const Navbar = () => {
             <li
               key={item.id}
               className="px-4 text-2xl text-yellow-500 capitalize cursor-pointer hover:scale-105 hover:duration-100 hover:text-yellow-200"
+              onClick={() => handleScroll(item.sectionId)}
             >
               {item.name}
             </li>
@@ -61,17 +74,20 @@ const Navbar = () => {
         {showMenu && (
           <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-purple-950 to-blue-500">
             {navItems.map((item) => (
-                <li
-                  key={item.id}
-                  className="text-4xl py-4 text-yellow-500 capitalize cursor-pointer hover:scale-105 hover:duration-100 hover:text-yellow-200"
-                >
-                  {item.name}
-                </li>
-              ))}
+              <li
+                key={item.id}
+                className="text-4xl py-4 text-yellow-500 capitalize cursor-pointer hover:scale-105 hover:duration-100 hover:text-yellow-200"
+                onClick={() => {
+                  handleScroll(item.sectionId);
+                  displayMenuItems();
+                }}
+              >
+                {item.name}
+              </li>
+            ))}
           </ul>
         )}
       </div>
-      {/* <div className="h-1 mt-20 w-full bg-black fixed shadow-lg rounded"></div> */}
     </>
   );
 };
